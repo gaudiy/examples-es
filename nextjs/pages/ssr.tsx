@@ -9,7 +9,7 @@ import { SayResponse } from "../gen/connectrpc/eliza/v1/eliza_pb";
 export const getServerSideProps = async () => {
   const transport = createConnectTransport({
     // Note: you cannot use a relative path like `/api` here because SSR requires absolute URLs.
-    baseUrl: "https://demo.connectrpc.com",
+    baseUrl: "https://connect-go-demo.dev.gaudiy.dev",
   });
   const client = createPromiseClient(ElizaService, transport);
   const request = { sentence: "hi (from the server)" };
